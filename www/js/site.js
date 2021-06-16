@@ -12,7 +12,3 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-
-var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-    target: '#navbar'
-})

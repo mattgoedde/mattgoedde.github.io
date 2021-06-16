@@ -1,5 +1,3 @@
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
     apiKey: "AIzaSyBmgnIyfsyn1rlFUYfFuAaZXFavkKZIWKI",
     authDomain: "mattgoedde-github-io.firebaseapp.com",
@@ -11,10 +9,9 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+const saveToFirebase = () => {
 
-!function() {
-    console.log("Code Runs!");
-}();
+};
 
 
 // Additional Bootstrap scripting
@@ -85,4 +82,4 @@ firebase.initializeApp(firebaseConfig);
 
     setActiveItem()
     window.addEventListener('hashchange', setActiveItem)
-})()
+})();

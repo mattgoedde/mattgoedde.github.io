@@ -42,13 +42,13 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="firstName" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="firstName" aria-describedby="firstName" required autofocus>
+                                        <input name="firstName" type="text" class="form-control" id="firstName" aria-describedby="firstName" required autofocus>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="lastName" class="form-label">Last Name</label>
-                                        <input type="text" class="form-control" id="lastName" aria-describedby="lastName" required>
+                                        <input name="lastName" type="text" class="form-control" id="lastName" aria-describedby="lastName" required>
                                     </div>
                                 </div>
                             </div>
@@ -56,13 +56,13 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email Address</label>
-                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                                        <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="phone" class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control" id="phone" aria-describedby="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Follow Format: 123-456-7890">
+                                        <input name="phone" type="tel" class="form-control" id="phone" aria-describedby="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Follow Format: 123-456-7890">
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                 <div class="col">
                                     <div class="mb-3">
                                         <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                                        <textarea name="message" class="form-control" id="message" rows="3" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
     <script type="application/javascript">
-        $( "#contactForm" ).submit(function( event ) {
+        $("#contactForm").submit(function( event ) {
             console.log( $( this ).serializeArray() );
             event.preventDefault();
         });

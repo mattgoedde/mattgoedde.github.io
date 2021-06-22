@@ -88,6 +88,21 @@
         var formData = [];
         $("#contactForm").submit(function( event ) {
             formData = $(this).serializeArray();
+            
+            let data = {};
+            formData.forEach((item) => {
+                data[item.name] = item.value;
+            });
+
+            firebase.database().ref('contacts').push().set(data)
+            .then(function(snapshot) {
+                console.log(snapshot);
+                alert("Success!"); // some success method
+            }, function(error) {
+                console.log('error' + error);
+                alert("Error!"); // some error method
+            });
+
             event.preventDefault();
         });
     </script>

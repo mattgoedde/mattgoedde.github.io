@@ -87,6 +87,7 @@
     <script type="application/javascript">
         var formData = [];
         $("#contactForm").submit(function( event ) {
+            event.preventDefault();
             formData = $(this).serializeArray();
             
             let data = {};
@@ -94,7 +95,8 @@
                 data[item.name] = item.value;
             });
 
-            firebase.database().ref('contacts').push().set(data)
+            firebase.database().ref('contacts')
+            .push().set(data)
             .then(function(snapshot) {
                 console.log(snapshot);
                 alert("Success!"); // some success method

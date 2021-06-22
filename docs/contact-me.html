@@ -102,12 +102,12 @@
             .then(function(snapshot) {
                 console.log(snapshot);
                 alert("I will be in contact shortly!"); // some success method
+                window.location.href = "/";
             }, function(error) {
                 console.log('error' + error);
                 alert("Uh oh :(\nPlease email me at mattgoedde99@gmail.com"); // some error method
             });
 
-            event.preventDefault();
         });
     </script>
 </body>

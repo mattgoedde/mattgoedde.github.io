@@ -6,110 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Portfolio</title>
 </head>
 
 <body>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-
-    <script src="www/js/site.js"></script>
-    <link href="www/css/site.css" rel="stylesheet">
-    <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
-        <div class="container-fluid d-flex align-items-center">
-            <a href="/" class="nav-link">
-                <h1 class="d-flex align-items-center fs-4 text-white mb-0">
-                    Matthew Goedde
-                </h1>
-            </a>
-        </div>
-    </header>
-    <div class="bd-cheatsheet container-fluid bg-body">
-        <section>
-            <article class="my-3">
-                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                    <h3>Contact Me</h3>
-                </div>
-                <div class="bd-example">
-                    <div class="container">
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="firstName" class="form-label">First Name</label>
-                                        <input name="firstName" type="text" class="form-control" id="firstName" aria-describedby="firstName" required autofocus>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="lastName" class="form-label">Last Name</label>
-                                        <input name="lastName" type="text" class="form-control" id="lastName" aria-describedby="lastName" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email Address</label>
-                                        <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="phone" class="form-label">Phone Number</label>
-                                        <input name="phone" type="tel" class="form-control" id="phone" aria-describedby="phoneNumber" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" title="Follow Format: 123-456-7890">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <label for="message" class="form-label">Message</label>
-                                        <textarea name="message" class="form-control" id="message" rows="3" required></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>    
-                    </div>
-                </div>
-            </article>
-        </section>
-    </div>
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
-    <script type="application/javascript">
-        var formData = [];
-        $("#contactForm").submit(function( event ) {
-            event.preventDefault();
-            formData = $(this).serializeArray();
-            
-            let data = {};
-            formData.forEach((item) => {
-                data[item.name] = item.value;
-            });
-
-            firebase.database().ref('contacts')
-            .push().set(data)
-            .then(function(snapshot) {
-                console.log(snapshot);
-                alert("I will be in contact shortly!"); // some success method
-                window.location.href = "/";
-            }, function(error) {
-                console.log('error' + error);
-                alert("Uh oh :(\nPlease email me at mattgoedde99@gmail.com"); // some error method
-            });
-
-        });
-    </script>
+    
 </body>
 
 </html>

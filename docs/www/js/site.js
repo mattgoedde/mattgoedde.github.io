@@ -1,6 +1,6 @@
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
     apiKey: "AIzaSyBmgnIyfsyn1rlFUYfFuAaZXFavkKZIWKI",
     authDomain: "mattgoedde-github-io.firebaseapp.com",
     databaseURL: "https://mattgoedde-github-io-default-rtdb.firebaseio.com",
@@ -9,81 +9,7 @@
     messagingSenderId: "908695623095",
     appId: "1:908695623095:web:5ba3e6e45e4b01c3c64432",
     measurementId: "G-YDG7RX6654"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-const saveToFirebase = () => {
-
 };
-
-
-// Additional Bootstrap scripting
-/* global bootstrap: false */
-
-(function () {
-    'use strict'
-
-    // Tooltip and popover demos
-    document.querySelectorAll('.tooltip-demo')
-        .forEach(function (tooltip) {
-            new bootstrap.Tooltip(tooltip, {
-                selector: '[data-bs-toggle="tooltip"]'
-            })
-        })
-
-    document.querySelectorAll('[data-bs-toggle="popover"]')
-        .forEach(function (popover) {
-            new bootstrap.Popover(popover)
-        })
-
-    document.querySelectorAll('.toast')
-        .forEach(function (toastNode) {
-            var toast = new bootstrap.Toast(toastNode, {
-                autohide: false
-            })
-
-            toast.show()
-        })
-
-    // Disable empty links
-    document.querySelectorAll('[href="#"]')
-        .forEach(function (link) {
-            link.addEventListener('click', function (event) {
-                event.preventDefault()
-            })
-        })
-
-    function setActiveItem() {
-        var hash = window.location.hash
-
-        if (hash === '') {
-            return
-        }
-
-        var link = document.querySelector('.bd-aside a[href="' + hash + '"]')
-        var active = document.querySelector('.bd-aside .active')
-        var parent = link.parentNode.parentNode.previousElementSibling
-
-        link.classList.add('active')
-
-        if (parent.classList.contains('collapsed')) {
-            parent.click()
-        }
-
-        if (!active) {
-            return
-        }
-
-        var expanded = active.parentNode.parentNode.previousElementSibling
-
-        active.classList.remove('active')
-
-        if (expanded && parent !== expanded) {
-            expanded.click()
-        }
-    }
-
-    setActiveItem()
-    window.addEventListener('hashchange', setActiveItem)
-})();
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();

@@ -1,10 +1,10 @@
 const imgUrls = [
-    '/docs/www/img/jumbotron/1.jpg',
-    '/docs/www/img/jumbotron/2.jpg',
-    '/docs/www/img/jumbotron/3.jpg',
-    '/docs/www/img/jumbotron/4.jpg',
-    '/docs/www/img/jumbotron/5.jpg',
-    '/docs/www/img/jumbotron/6.png'
+    '/www/img/jumbotron/1.jpg',
+    '/www/img/jumbotron/2.jpg',
+    '/www/img/jumbotron/3.jpg',
+    '/www/img/jumbotron/4.jpg',
+    '/www/img/jumbotron/5.jpg',
+    '/www/img/jumbotron/6.png'
 ]
 const jumbotron = document.getElementById("jumbotron");
 
@@ -25,7 +25,7 @@ function jumbotronNextBtn() {
 
 const jumbotronImgUrl = () => {
     const cssValue = window.getComputedStyle(jumbotron).getPropertyValue("background-image");
-    return '/docs' + cssValue.split('/docs')[1].split('"')[0];
+    return '/www' + cssValue.split('/www')[1].split('"')[0];
 }
 function setJumbotronImgUrl(imgUrl) {
     console.log("New Url: " + imgUrl);

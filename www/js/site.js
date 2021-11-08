@@ -1,10 +1,10 @@
 const imgUrls = [
-    '/www/img/jumbotron/1.jpg',
-    '/www/img/jumbotron/2.jpg',
-    '/www/img/jumbotron/3.jpg',
-    '/www/img/jumbotron/4.jpg',
-    '/www/img/jumbotron/5.jpg',
-    '/www/img/jumbotron/6.png'
+    '/www/img/jumbotron/cbus-portrait-lexi-matt.jpg',
+    '/www/img/jumbotron/bgsu-lexi-matt-portrait.jpg',
+    '/www/img/jumbotron/rocky-lexi-matt-portrait.jpg',
+    '/www/img/jumbotron/rocky-lexi-matt-selfie.jpg',
+    '/www/img/jumbotron/wapk-diesel-truck.jpg',
+    '/www/img/jumbotron/leip-brutus-matt-portrait.png'
 ]
 const jumbotron = document.getElementById("jumbotron");
 

@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="www/css/site.css">
+        <script type="text/javascript" src="www/js/site.js" defer></script>
         <title>Portfolio</title>
     </head>
     
@@ -33,18 +34,24 @@
                 <h2>Hello, World!</h2>
         </header>
         <article class="grid-item grid-article">
-            <section>
-                <h4>Who I am</h4>
-                <p>Hello! My name is Matthew Goedde. I am currently a Software Developer with American Honda Motor Co., Inc. With Honda, I currently work in the Anna Engine Plant in Anna, Ohio.</p>
-            </section>
-            <section>
-                <h4>Work</h4>
-                <p>With Honda, I am a part of a regional "Line Control" team which has members at all manufacturing facilities. At the engine plant, I work on a variety of systems and projects. My main focus is a data collection system, written in Java.</p>
-            </section>
-            <section>
-                <h4>Home</h4>
-                <p>At home, I live with my fiance and two dogs, Chuck and Diesel. I enjoy a variey of hobbies in my spare time and tinkering on both Software and Hardware (including non-computer related hardware).</p>
-            </section>
+            <div class="jumbotron" id="jumbotron">
+                <button id="jumbotron-prev-btb" onclick="jumbotronPrevBtn()">Prev</button>
+                <button id="jumbotron-next-btn" onclick="jumbotronNextBtn()">Next</button>
+            </div>
+            <div class="flex-article">
+                <section>
+                    <h4>Who I am</h4>
+                    <p>Hello! My name is Matthew Goedde. I am currently a Software Developer with American Honda Motor Co., Inc. With Honda, I currently work in the Anna Engine Plant in Anna, Ohio.</p>
+                </section>
+                <section>
+                    <h4>What I do</h4>
+                    <p>With Honda, I am a part of a regional "Line Control" team which has members at all manufacturing facilities. At the engine plant, I work on a variety of systems and projects. My main focus is a data collection system, written in Java.</p>
+                </section>
+                <section>
+                    <h4>How I live</h4>
+                    <p>At home, I live with my fiance and two dogs, Chuck and Diesel. I enjoy a variey of hobbies in my spare time and tinkering on both Software and Hardware (including non-computer related hardware).</p>
+                </section>
+            </div>
         </article>
         <!-- <footer class="grid-item grid-footer">
             

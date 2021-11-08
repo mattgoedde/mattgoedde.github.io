@@ -1,15 +1,35 @@
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var firebaseConfig = {
-    apiKey: "AIzaSyBmgnIyfsyn1rlFUYfFuAaZXFavkKZIWKI",
-    authDomain: "mattgoedde-github-io.firebaseapp.com",
-    databaseURL: "https://mattgoedde-github-io-default-rtdb.firebaseio.com",
-    projectId: "mattgoedde-github-io",
-    storageBucket: "mattgoedde-github-io.appspot.com",
-    messagingSenderId: "908695623095",
-    appId: "1:908695623095:web:5ba3e6e45e4b01c3c64432",
-    measurementId: "G-YDG7RX6654"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+const imgUrls = [
+    '/docs/www/img/jumbotron/1.jpg',
+    '/docs/www/img/jumbotron/2.jpg',
+    '/docs/www/img/jumbotron/3.jpg',
+    '/docs/www/img/jumbotron/4.jpg',
+    '/docs/www/img/jumbotron/5.jpg',
+    '/docs/www/img/jumbotron/6.png'
+]
+const jumbotron = document.getElementById("jumbotron");
+
+function jumbotronPrevBtn() {
+    let prevUrl = imgUrls[imgUrls.indexOf(jumbotronImgUrl()) - 1];
+    if(!prevUrl) {
+        prevUrl = imgUrls[imgUrls.length - 1];
+    }
+    setJumbotronImgUrl(prevUrl);
+}
+function jumbotronNextBtn() {
+    let nextUrl = imgUrls[imgUrls.indexOf(jumbotronImgUrl()) + 1];
+    if(!nextUrl) {
+        nextUrl = imgUrls[0];
+    }
+    setJumbotronImgUrl(nextUrl);
+}
+
+const jumbotronImgUrl = () => {
+    const cssValue = window.getComputedStyle(jumbotron).getPropertyValue("background-image");
+    return '/docs' + cssValue.split('/docs')[1].split('"')[0];
+}
+function setJumbotronImgUrl(imgUrl) {
+    console.log("New Url: " + imgUrl);
+    console.log("New property: " + `url('${imgUrl}');`);
+    if(imgUrl) 
+        jumbotron.style.backgroundImage = `url('${imgUrl}')`;
+}

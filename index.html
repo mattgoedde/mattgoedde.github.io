@@ -4,6 +4,9 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="www/css/site.css">
         <script type="text/javascript" src="www/js/site.js" defer></script>
@@ -14,17 +17,17 @@
         <nav class="grid-item grid-navbar">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="/">
                         <span>Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/hobbies.html">
                         <span>Hobbies</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/projects.html">
                         <span>Projects</span>
                     </a>
                 </li>
@@ -38,19 +41,28 @@
                 <button id="jumbotron-prev-btb" onclick="jumbotronPrevBtn()">Prev</button>
                 <button id="jumbotron-next-btn" onclick="jumbotronNextBtn()">Next</button>
             </div>
-            <div class="flex-article">
-                <section>
-                    <h4>Who I am</h4>
-                    <p>Hello! My name is Matthew Goedde. I am currently a Software Developer with American Honda Motor Co., Inc. With Honda, I currently work in the Anna Engine Plant in Anna, Ohio.</p>
-                </section>
-                <section>
-                    <h4>What I do</h4>
-                    <p>With Honda, I am a part of a regional "Line Control" team which has members at all manufacturing facilities. At the engine plant, I work on a variety of systems and projects. My main focus is a data collection system, written in Java.</p>
-                </section>
-                <section>
-                    <h4>How I live</h4>
-                    <p>At home, I live with my fiance and two dogs, Chuck and Diesel. I enjoy a variey of hobbies in my spare time and tinkering on both Software and Hardware (including non-computer related hardware).</p>
-                </section>
+            <div class="card-grid">
+                <div class="card card-shadow">
+                    <div class="card-header">Who I am</div>
+                    <div class="card-body">
+                        Hello! My name is Matthew Goedde. I am currently a Software Developer with American Honda Motor Co., Inc. With Honda, I currently work in the Anna Engine Plant in Anna, Ohio.
+                    </div>
+                    <div class="card-footer"></div>
+                  </div>
+                <div class="card card-shadow">
+                    <div class="card-header">What I do</div>
+                    <div class="card-body">
+                        With Honda, I am a part of a regional "Line Control" team which has members at all manufacturing facilities. At the engine plant, I work on a variety of systems and projects. My main focus is a data collection system, written in Java.
+                    </div>
+                    <div class="card-footer"></div>
+                  </div>
+                <div class="card card-shadow">
+                    <div class="card-header">How I live</div>
+                    <div class="card-body">
+                        At home, I live with my fiance and two dogs, Chuck and Diesel. I enjoy a variey of hobbies in my spare time and tinkering on both Software and Hardware (including non-computer related hardware).
+                    </div>
+                    <div class="card-footer"></div>
+                  </div>
             </div>
         </article>
         <!-- <footer class="grid-item grid-footer">

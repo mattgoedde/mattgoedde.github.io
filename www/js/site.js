@@ -28,8 +28,6 @@ const jumbotronImgUrl = () => {
     return '/www' + cssValue.split('/www')[1].split('"')[0];
 }
 function setJumbotronImgUrl(imgUrl) {
-    console.log("New Url: " + imgUrl);
-    console.log("New property: " + `url('${imgUrl}');`);
     if(imgUrl) 
         jumbotron.style.backgroundImage = `url('${imgUrl}')`;
 }

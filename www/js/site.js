@@ -4,7 +4,8 @@ const imgUrls = [
     '/www/img/jumbotron/rocky-lexi-matt-portrait.jpg',
     '/www/img/jumbotron/rocky-lexi-matt-selfie.jpg',
     '/www/img/jumbotron/wapk-diesel-truck.jpg',
-    '/www/img/jumbotron/leip-brutus-matt-portrait.png'
+    '/www/img/jumbotron/leip-brutus-matt-portrait.png',
+    '/www/img/jumbotron/chuck.jpg'
 ]
 const jumbotron = document.getElementById("jumbotron");
 
